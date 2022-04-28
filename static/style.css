@@ -1,0 +1,322 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@1,600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Libre Bodoni', serif;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+:root{
+    --color-orange: #d8cbdc;
+    --color-black: #1d1d1d;
+    --color-white: #ffffff;
+    --border-color: rgba(0,0,0,.07);
+}
+body{
+width: 100%;
+height: 100%;
+background: var(--color-white);
+overflow-x: hidden;
+}
+
+/*home*/
+.container_home{
+background: var(--color-orange);
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding:0 6px;
+    position: relative;
+}
+.navbar{
+    width: 65px;
+    height: 96vh;
+    padding: 2px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--color-orange);
+
+}
+.navbar div{
+    margin-top: 100px;
+    text-align: center;
+}
+.navbar  ion-icon{
+    font-size: 1.7rem;
+    margin: .7rem auto;
+    padding: .5rem;
+    border-radius: 50%;
+ background: var(--border-color);
+}
+.logout{
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+}
+/*data_body*/
+hr{
+    outline: none;
+    border: none;
+    padding: 1.5px;
+    background: var(--border-color);
+    width: 100%;
+}
+.data_body{
+    background: var(--color-white);
+    width: calc(100% - 80px);
+    height: auto;
+    margin-left: calc(77px );
+    margin-right: 5px;
+    position: absolute;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    top: 0;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    /*background: red;*/
+}
+.profile{
+    width: calc(100% - 6rem - 4px);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    /*border: 4px solid var(--border-color);*/
+    border-radius: 10px;
+}
+.profile h3{
+    font-size: 1.7rem;
+    color: var(--color-black);
+}
+.profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+/*search_manage*/
+.search_manage{
+    width: calc(100% - 6rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin: 1rem auto;
+    padding:0 3rem;
+}
+.search_manage input{
+    width: 400px;
+    outline: none;
+    border-radius:30px;
+    font-size: 1.5rem;
+    color: var(--color-black);
+    height: 45px;
+    text-indent: 2rem;
+    border: 2px solid var(--border-color);
+}
+.search_manage .btn_group{
+    width: auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.btn{
+    background: var(--color-white);
+    border-radius: 5px;
+    /*width: 100px;*/
+    padding: .4rem 2rem;
+    outline: none;
+    border: 2px solid var(--border-color);
+    font-size: 1.5rem;
+    background: var(--border-color);
+    transition: .5s;
+}
+.btn:nth-child(2){
+    background: var(--color-black);
+    color: var(--color-white);
+}
+.btn:hover{
+    color: var(--color-white);
+    background: var(--color-black);
+}
+/*customize*/
+.customize{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    gap: 2rem;
+    margin-left: 3rem;
+}
+.container_home details{
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+}
+details summary{
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: .1rem .3rem;
+    border-radius: 2px;
+}
+/*table_data*/
+.table_data{
+    width: 100%;
+    height: auto;
+    margin: 1rem auto;
+}
+.table{
+    border-collapse: collapse;
+    /*border: 2px solid var(--border-color);*/
+    width: 1;
+    height: auto;
+    border-left: none;
+    border-right: none;
+    padding: 0 3rem;
+    margin: auto;
+    margin-left: 1rem;    width: calc(100% - 3rem);
+}
+thead{
+    text-align: center;
+    background: var(--color-black);
+    color: var(--color-white);
+    border-bottom: 4px solid var(--border-color);
+}
+th{
+    padding: .5rem 0;
+    font-size: 1.3rem;
+
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+tbody{
+    margin-top: 1rem auto;
+}
+td{
+    padding: .7rem .3rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.profile_name{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+table img{
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+}
+.profile_name b{
+    font-size: 1.3rem;
+}
+td{
+    border-right:1px solid var(--border-color);
+    padding-left: .7rem;
+}
+/*upload data*/
+.container_upload{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 3rem 0;
+    background: var(--color-black);
+    background: #ebf0f2;
+}
+.container_upload h3{
+    font-size: 3rem;
+}
+.upload_form{
+    width: 70%;
+    height: auto;
+    padding: 1rem 1rem;
+    margin:2rem auto;
+}
+.flex_two{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /*align-items: center;*/
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+    margin: .6rem auto;
+}
+.form-control{
+    width: 80%;
+    height: 45px;
+    background: transparent;
+    border: 2px solid var(--border-color);
+    outline: none;
+    border-radius: 20px;
+    color: var(--color-black);
+    text-indent: 1rem;
+    font-size: 1.5rem;
+
+}
+.file{
+    font-size: 1.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    width: 80%;
+    padding:.6rem 0 ;   
+     text-indent: 1rem;
+}
+.address{
+    height: 45px;
+    width: 80%;
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid var(--border-color);
+    font-size: 1.5rem;
+    text-indent: 1rem;
+    background: transparent;
+}
+
+.gender input{
+    width: 20px;
+    height: 20px;
+    margin-left: 1rem;
+}
+.gender label{
+    font-size: 1.5rem;
+}
+.upload_btn{
+    
+    padding: .6rem 2rem;
+    outline: none;
+    border: 2px solid var(--color-black);
+    font-size: 1.6rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: .6s;
+    background: var(--border-color);
+}
+.upload_btn:hover{
+    background: var(--color-black);
+    color: var(--color-white);
+}
+.response{
+    width: 100%;
+    height: auto;
+    text-align: right;
+}
+.success{
+    color: #4caf50;
+    font-size: 2rem;
+}
+.error{
+    color: #f44336;
+    font-size: 2rem;
+}

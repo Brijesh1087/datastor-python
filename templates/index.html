@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block title %}
+home
+{% endblock %}
+{% block body %}
+<div class="container_home">
+	<div class="navbar">
+		<div>
+		<ion-icon name="home-outline"></ion-icon><br>
+		<ion-icon name="chatbubble-ellipses-outline"></ion-icon><br>
+		<ion-icon name="business-outline"></ion-icon><br>
+		<ion-icon name="settings-outline"></ion-icon><br>
+		</div>
+		<a href="/logout" class="logout">
+			<ion-icon name="log-out-outline"></ion-icon>
+		</a>
+	</div>
+	<div class="data_body">
+		<div class="profile">
+			<h3>Manage Profile</h3>
+			<img src="{{url_for('static',filename='Images/profile.jpg')}}" alt="">
+		</div>
+		<hr>
+		<div class="search_manage">
+			<input type="text" placeholder="search data..." class="search">
+			<div class="btn_group">
+				<a href=""><button class="btn">search</button></a>
+				<a href="/upload"><button class="btn">upload</button></a>
+			</div>
+		</div>
+		
+ 		<hr>
+		<div class="table_data">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>profile</th>
+						<th>name</th>
+						<th>email</th>
+						<th>contact</th>
+						<th>age</th>
+						<th>work</th>
+						<th>color</th>
+						<th>gender</th>
+						<th>address</th>
+						<th>edit</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for x in data %}
+					<tr>
+						<!-- <td class="profile_name">
+							<img src="./static/images/{{x[10]}}" alt="">
+							<b>{{x[1]}}</b>
+						</td> -->
+						<td><img src="./static/images/{{x[10]}}" alt=""></td>
+						<td>{{x[1]}}</td>
+						<td class="border">{{x[2]}}</td>
+						<td>{{x[3]}}</td>
+						<td class="border">{{x[4]}}</td>
+						<td>{{x[5]}}</td>
+						<td class="border">{{x[6]}}</td>
+						<td>{{x[7]}}</td>
+						<td class="border">{{x[8]}}</td>
+						<td><ion-icon name="ellipsis-vertical-outline"></ion-icon></td>
+					</tr>
+					{% endfor  %}
+				</tbody>
+
+			</table>
+		</div>
+	</div>
+</div>
+{% endblock %}

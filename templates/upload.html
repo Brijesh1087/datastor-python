@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}
+upload
+{% endblock %}
+{% block body %}
+<div class="container_upload">
+	<h3>upload</h3>
+	<div class="upload_form">
+		<div class="responese">
+			<b class="{{success_class}}">{{ success }}</b>
+			<b class="{{error_class}}">{{ error }}</b>
+		</div>
+		<form action="/upload" method="post" enctype="multipart/form-data">
+			<div class="flex_two">
+				<input type="text" maxlength="15" min="3" required class="form-control" placeholder="full name" name="name">
+				<input type="text" class="form-control" placeholder="email" maxlength="30" minlength="10" name="email">
+			</div>
+			<div class="flex_two">
+				<input type="text" maxlength="14" min="8" name="contact" class="form-control"  placeholder="contact">
+				<input maxlength="13" min="5" type="text" name="work" class="form-control" placeholder="work">
+			</div>
+			<div class="flex_two">
+				<input max="90" min="10"  type="number" name="age" class="form-control" placeholder="age">
+				<input minlength="3" maxlength="10" type="text"  name="color" class="form-control" placeholder="color">
+			</div>
+			<div class="flex_two">
+				<input type="file" name="file" class="file" >
+				<textarea maxlength="15" minlength="5" name="address" placeholder="address" id="" class="address"></textarea>
+			</div>
+			<div class="flex_two">
+				<div class="gender">
+					<input id="male" value="male" name="gender" type="radio" class="gender_input">
+					<label for="male">Male</label>
+					<input id="female" value="female" name="gender" type="radio" class="gender_input">
+					<label for="female">female</label>
+				</div>
+				<input type="submit"  value="upload" class="upload_btn">
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}
